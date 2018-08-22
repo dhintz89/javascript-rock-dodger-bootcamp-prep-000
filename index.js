@@ -125,7 +125,11 @@ function endGame() {
     ROCKS[i].remove();
   }
   window.removeEventListener('keyDown', moveDodger);
+<<<<<<< HEAD
   alert("YOU LOSE!");
+=======
+  console.log("YOU LOSE!");
+>>>>>>> 2fa756d61c874c8cb12d9a8c33902ab20289264b
 }
 
 function moveDodger(e) {
@@ -157,11 +161,20 @@ function moveDodgerLeft() {
    */
    var left = positionToInteger(DODGER.style.left);
    function step() {
+<<<<<<< HEAD
      DODGER.style.left = `${left-=4}px`;
    }
    if(left>=4) {
      window.requestAnimationFrame(step)
    }
+=======
+     DODGER.style.left = `${dodgerLeftEdge-=4}px`;
+     if(dodgerLeftEdge>4) {
+       window.requestAnimationFrame(step)
+     }
+   }
+   window.requestAnimationFrame(step)
+>>>>>>> 2fa756d61c874c8cb12d9a8c33902ab20289264b
 }
 
 function moveDodgerRight() {
@@ -173,10 +186,18 @@ function moveDodgerRight() {
    var left = positionToInteger(DODGER.style.left);
    function step() {
      DODGER.style.left = `${left+=4}px`;
+<<<<<<< HEAD
    }
    if(left<=(GAME_WIDTH)-44) {
      window.requestAnimationFrame(step)
    }
+=======
+     if(left<=(GAME_WIDTH-40)) {
+       window.requestAnimationFrame(step)
+     }
+   }
+   window.requestAnimationFrame(step)
+>>>>>>> 2fa756d61c874c8cb12d9a8c33902ab20289264b
 }
 
 /**
